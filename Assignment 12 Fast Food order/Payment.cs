@@ -12,7 +12,7 @@ namespace Assignment_12_Fast_Food_order
         private int fCount = 0;
         private int dCount = 0;
 
-        public Payment( int fCount, int dCount)
+        public Payment(int fCount, int dCount)
         {
             drinkItems = new DrinkItem[100];
             foodItems = new FoodItem[100];
@@ -20,12 +20,12 @@ namespace Assignment_12_Fast_Food_order
             this.dCount = dCount;
         }
 
-        public double FindPrice(Item[] pl , string code)
+        public double FindPrice(Item[] pl, string code)
         {
             int i = 0;
 
 
-            for(i=0; i < pl.Length; i++)
+            for (i = 0; i < pl.Length; i++)
             {
                 if (code != null && pl[i].GetItemCode() == code)
                 {
@@ -40,7 +40,7 @@ namespace Assignment_12_Fast_Food_order
             int i = 0;
             double billTotal = 0;
 
-            for(i=0; i < foodItems.Length; i++)
+            for (i = 0; i < foodItems.Length; i++)
             {
                 if (foodItems[i] != null)
                 {
@@ -68,6 +68,26 @@ namespace Assignment_12_Fast_Food_order
             return billTotal;
         }
 
+        public string AddDrinkItem(DrinkItem[] drinkItems)
+        {
+            DrinkItem[dCount] = drinkInput;
+            dCount++;
+        }
+
+        public string AddFoodItem(FoodItem[] foodItems)
+        {
+            FoodItem[fCount] = foodInput;
+            fCount++;
+        }
+
+        public string GetDrink(DrinkItem[]);
+        {
+            return DrinkItem[dCount]
+        }
+
+        
+
+        
 
     }
 }
